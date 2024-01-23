@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Exo+2:wght@500&family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .container h1 {
+    font-size: 40px;
+    font-family: 'Climate Crisis',cursive;
+    font-weight: normal;
+    padding: 15px;
+    color: #333;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: #352f44;
+    color: rgb(127, 120, 80);
+  }
+  .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+  }
+  .image-container img {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    transition: 0.2s linear;
+  }
+  .image {
+    border: 10px solid #97cba9;
+    border-radius: 20px;
+    box-shadow: 0 35px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+  .image:hover img {
+    transform: scale(1.1);
+  }
+  .caption {
+    margin: 3px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+  }
+  .lightbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+  }
+  .lightbox span {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .lightbox img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid white;
+    border-radius: 5px;
+    width: 750px;
+    object-fit: cover;
+  }
+  .another-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  #prev-btn,
+    #next-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 30px;
+        color: #fff;
+        background-color: rgba(155, 52, 15, 0.313);
+        border: none;
+        padding: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    #prev-btn {
+        left: 10px;
+    }
+
+    #next-btn {
+        right: 10px;
+    }
+
+    #prev-btn:hover,
+    #next-btn:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .another-page{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+      }
+      .another-page button{
+        padding: 10px 20px;
+        margin: 0px 5px;
+        font-size: 20px;
+        width: 180px;
+        outline: none;
+        border: none;
+        color: white;
+        background-color: burlywood;
+       text-align: center;
+      }
+
+
+  @media (max-width: 750px) {
+    .lightbox img {
+      width: 95%;
+    }
+    .another-page{
+        width: 95%;
+    }
+  }

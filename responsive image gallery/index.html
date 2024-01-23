@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Image Gallery</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Image Gallery</h1>
+      <div class="image-container" onclick="openLightbox(event)">
+        <div class="image">
+          <img
+            src="img/image1.jpeg"
+            alt=""
+          />
+          <div class="caption">Squirrel</div>
+        </div>
+        <div class="image">
+          <img
+            src="img/image2.jpeg"
+            alt=""
+          />
+          <div class="caption">Elephant</div>
+        </div>
+        <div class="image">
+          <img
+            src="img/image3.webp"
+            alt=""
+          />
+          <div class="caption">Dog</div>
+        </div>
+        <div class="image">
+          <img
+            src="img/image4.jpeg"
+            alt=""
+          />
+          <div class="caption">Tiger</div>
+        </div>
+        <div class="image">
+          <img
+            src="img/image5.jpeg"
+            alt=""
+          />
+          <div class="caption">Coder</div>
+        </div>
+        <div class="image">
+          <img
+            src="img/image6.jpeg"
+            alt=""
+          />
+          <div class="caption">Traveler</div>
+        </div>
+        <div class="image">
+          <img
+            src="img/image7.jpg"
+            alt=""
+          />
+          <div class="caption">Nature</div>
+        </div>
+        <div class="image">
+          <img
+            src="img/image8.webp"
+            alt=""
+          />
+          <div class="caption">Ram</div>
+      </div>
+    </div>
+    
+    <div class="another-page">
+      <a href="index2.html"><button >Next</button></a>
+    </div>
+
+    <div class="lightbox">
+      <span id="close-btn" onclick="closeLightbox()">&times;</span>
+
+      <img id="lightbox-img" src="" alt="lightbox image" />
+
+      <button id="prev-btn" onclick="changeImage(-1)">&lt; Prev</button>
+      <button id="next-btn" onclick="changeImage(1)">Next &gt;</button>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
